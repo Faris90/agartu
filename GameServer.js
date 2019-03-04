@@ -118,7 +118,7 @@ module.exports = GameServer;
 GameServer.prototype.start = function() {
     // Logging
     this.log.setup(this);
-
+ this.config.serverPort = process.env.PORT || this.config.serverPort ;
 		// Rcon Info
     if ( this.config.serverAdminPass != '' )
     {
